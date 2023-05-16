@@ -1,0 +1,85 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue May 16 19:41:05 2023
+| Host         : LAPTOP-8KCDPL3U running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_level_test_control_sets_placed.rpt
+| Design       : top_level_test
+| Device       : xc7a35ti
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    59 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      4 |            1 |
+|      5 |            1 |
+|      8 |            1 |
+|      9 |            3 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |           11 |
+| No           | No                    | Yes                    |               1 |            1 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             105 |           34 |
+| Yes          | No                    | Yes                    |              19 |            5 |
+| Yes          | Yes                   | No                     |              39 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+------------------------------------------+--------------------------------------+------------------+----------------+
+|   Clock Signal   |               Enable Signal              |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++------------------+------------------------------------------+--------------------------------------+------------------+----------------+
+|  i_clk_IBUF_BUFG |                                          | i_rst_IBUF                           |                1 |              1 |
+|  i_clk_IBUF_BUFG | UART_TRANSMIT/o_TX_Serial0               |                                      |                1 |              1 |
+|  i_clk_IBUF_BUFG | w_r_mem/col0                             |                                      |                2 |              4 |
+|  i_clk_IBUF_BUFG | w_r_mem/col0                             | w_r_mem/pixel_reg[0]                 |                1 |              5 |
+|  i_clk_IBUF_BUFG | UART_TRANSMIT/r_TX_Data0                 |                                      |                2 |              8 |
+|  i_clk_IBUF_BUFG | UART_TRANSMIT/o_TX_Serial0               | UART_TRANSMIT/r_Clk_Count[8]_i_1_n_0 |                3 |              9 |
+|  i_clk_IBUF_BUFG | w_r_mem/E[0]                             |                                      |                5 |              9 |
+|  i_clk_IBUF_BUFG | UART_READ/r_Clk_Count[8]_i_2__0_n_0      | UART_READ/r_Clk_Count[8]_i_1__0_n_0  |                3 |              9 |
+|  i_clk_IBUF_BUFG | w_r_mem/o_data[7]_i_2_n_0                | w_r_mem/o_data[7]_i_1_n_0            |                6 |             16 |
+|  i_clk_IBUF_BUFG | UART_READ/r_mem                          | i_rst_IBUF                           |                5 |             19 |
+|  i_clk_IBUF_BUFG |                                          |                                      |               11 |             25 |
+|  i_clk_IBUF_BUFG | w_r_mem/pixel0                           |                                      |               24 |             83 |
+|  i_clk_IBUF_BUFG | w_r_mem/r_mem_reg_r1_64_127_0_2_i_1_n_0  |                                      |               24 |             96 |
+|  i_clk_IBUF_BUFG | w_r_mem/r_mem_reg_r1_128_191_0_2_i_1_n_0 |                                      |               24 |             96 |
+|  i_clk_IBUF_BUFG | w_r_mem/r_mem_reg_r1_192_255_0_2_i_1_n_0 |                                      |               24 |             96 |
+|  i_clk_IBUF_BUFG | w_r_mem/r_mem_reg_r1_0_63_0_2_i_1_n_0    |                                      |               24 |             96 |
++------------------+------------------------------------------+--------------------------------------+------------------+----------------+
+
+
