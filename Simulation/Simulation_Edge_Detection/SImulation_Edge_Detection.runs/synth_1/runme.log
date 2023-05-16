@@ -1,0 +1,35 @@
+
+*** Running vivado
+    with args -log top_level_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_test.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top_level_test.tcl -notrace
+Command: synth_design -top top_level_test -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26544 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 385.395 ; gain = 99.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level_test' [D:/Vivado_Sobel/SobelEdgeDetection/SobelEdgeDetection-master/Simulation/Simulation_Edge_Detection/SImulation_Edge_Detection.srcs/sources_1/new/top_level_test.vhd:61]
+	Parameter HEIGHT bound to: 240 - type: integer 
+	Parameter WIDTH bound to: 320 - type: integer 
+ERROR: [Synth 8-5765] size mismatch in assignment; read failed [D:/Vivado_Sobel/SobelEdgeDetection/SobelEdgeDetection-master/Simulation/Simulation_Edge_Detection/SImulation_Edge_Detection.srcs/sources_1/new/top_level_test.vhd:84]
+ERROR: [Synth 8-421] mismatched array sizes in rhs and lhs of assignment [D:/Vivado_Sobel/SobelEdgeDetection/SobelEdgeDetection-master/Simulation/Simulation_Edge_Detection/SImulation_Edge_Detection.srcs/sources_1/new/top_level_test.vhd:91]
+ERROR: [Synth 8-285] failed synthesizing module 'top_level_test' [D:/Vivado_Sobel/SobelEdgeDetection/SobelEdgeDetection-master/Simulation/Simulation_Edge_Detection/SImulation_Edge_Detection.srcs/sources_1/new/top_level_test.vhd:61]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:09:58 ; elapsed = 00:14:37 . Memory (MB): peak = 863.516 ; gain = 577.602
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Sun May 14 10:48:43 2023...
